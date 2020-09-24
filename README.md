@@ -11,4 +11,4 @@ This app is currently available as a develop.
 
 ## Credits
 
-Thanks to @mjpitz for the backend
+Thanks to <a href="https://github.com/mjpitz">@mjpitz</a> for the backend
