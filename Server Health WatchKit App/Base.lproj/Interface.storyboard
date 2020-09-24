@@ -61,12 +61,46 @@
                     <items>
                         <table alignment="left" id="hsF-Ke-Jyd">
                             <items>
-                                <tableRow identifier="cell" id="jfY-49-uRZ">
-                                    <group key="rootItem" width="1" alignment="left" id="JVp-Xs-jT9"/>
+                                <tableRow identifier="cell" id="jfY-49-uRZ" customClass="MyRowController" customModule="Server_Health_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="JVp-Xs-jT9">
+                                        <items>
+                                            <separator alignment="left" id="C9h-e9-pO0"/>
+                                            <group width="95" alignment="left" layout="vertical" id="IfA-y7-8rv">
+                                                <items>
+                                                    <group width="84" alignment="left" contentMode="scaleAspectFit" id="6Pd-Jr-ATI">
+                                                        <items>
+                                                            <label width="88" alignment="left" text="Service Name" id="c70-yu-oiU">
+                                                                <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                                                            </label>
+                                                        </items>
+                                                    </group>
+                                                    <group width="83" alignment="left" contentMode="scaleAspectFit" id="phw-VA-LRC">
+                                                        <items>
+                                                            <label alignment="left" text="date" id="KFE-cb-Duw"/>
+                                                        </items>
+                                                    </group>
+                                                </items>
+                                            </group>
+                                            <group width="1" alignment="center" verticalAlignment="center" id="ymd-4A-HlA">
+                                                <items>
+                                                    <imageView alignment="left" image="hand.thumbsup.fill" catalog="system" id="s9U-gz-zOb"/>
+                                                </items>
+                                            </group>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="group" destination="JVp-Xs-jT9" id="i2M-A8-dIr"/>
+                                        <outlet property="image" destination="s9U-gz-zOb" id="gwH-yD-3WQ"/>
+                                        <outlet property="subtitleLabel" destination="KFE-cb-Duw" id="xUQ-8X-YRH"/>
+                                        <outlet property="titleLabel" destination="c70-yu-oiU" id="Lc9-Fv-jjs"/>
+                                    </connections>
                                 </tableRow>
                             </items>
                         </table>
                     </items>
+                    <connections>
+                        <outlet property="table" destination="hsF-Ke-Jyd" id="H9Z-va-sgN"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="384" y="50"/>
@@ -79,4 +113,7 @@
             <point key="canvasLocation" x="468" y="345"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="hand.thumbsup.fill" catalog="system" width="128" height="118"/>
+    </resources>
 </document>

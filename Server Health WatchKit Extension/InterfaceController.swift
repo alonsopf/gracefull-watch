@@ -18,8 +18,9 @@ class InterfaceController: WKInterfaceController {
     @IBAction func circleMainTouch() {
         self.pushController(withName: "DetailController", context: nil)
     }
+   
     func refresh() {
-        let url = URL(string: "http://example.com:9973/healthz")!
+        let url = URL(string: "http://sil.red:9973/healthz")!
 
         let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
             
@@ -28,7 +29,6 @@ class InterfaceController: WKInterfaceController {
             do {
                 // make sure this JSON is in the format we expect
                 if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
-                    print(json)
                     // try to read out a string array
                     let state = json["state"]
                     let stateString = state as! String
@@ -56,18 +56,11 @@ class InterfaceController: WKInterfaceController {
                 print("Failed to load: \(error.localizedDescription)")
             }
             
-
-            
-            
         }
-
         task.resume()
     }
     override func willActivate() {
        refresh()
-        
-        
-        // This method is called when watch view controller is about to be visible to user
     }
     
     override func didDeactivate() {
